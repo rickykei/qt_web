@@ -1,0 +1,33 @@
+
+
+<div id="submenu">
+
+<div id="suppPerformanceEval">
+	<div id="suppPerformanceEval_left"><a href="/benchmarking/suppPerf"><img src="/images/line_chart_logo.png"/></a></div>
+	<div id="suppPerformanceEval_right">This section allows the user to create or to amend audit checklist from existing file.
+	There is also a search function allow user to search for different audit checklist that has been 
+	established in the past. User needs to create at least 1 checklist before an audit can be scheduled.
+	</div>
+</div>
+
+<div id="complGradeAnalysis">
+	<div id="complGradeAnalysis_left"><a href="/benchmarking/complGradeAnalysis"><img src="/images/bar_chart_logo.png"/></a></div>
+	<div id="complGradeAnalysis_right">This section allows the user to define the most preferred audit 
+	dates for specific audit. An auditee needs to be defined before any audit can be scheduled.
+	Admin and auditee will then need to finalize the specific audit schedule according to the user
+	request. Automatic e-mail message alert will be sending
+	to all parties after any amendment to the audit schedule has been made.
+	</div>
+</div>
+
+<div id="suppComplRatio_desc">
+	<div id="suppComplRatio_left"><a href="/benchmarking/suppComplRatio"><img src="/images/pie_chart_logo.png"/></a></div>
+	<div id="suppComplRatio_right">This section allows the user to search for all the audit report that has been completed.
+	Search criteria include: request report ID, area, auditee code, auditee name,
+	industry, risk level & audit completion date.
+	</div>
+</div>
+
+ 
+
+</div>

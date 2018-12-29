@@ -1,0 +1,201 @@
+<link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jscal2.css" />
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jscal2.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/lang/en.js"></script>
+
+<?
+$yesNo = array('Y'=>'Yes', 'N'=>'No');
+?>
+
+<? 
+foreach($msAnses as $item) {
+	foreach ($item as $subItem) {
+		foreach ($subItem as $mcAns) {
+			echo CHtml::errorSummary($mcAns, '', '', array('class'=>'errorMsg'));
+		}
+	}
+}
+
+foreach($handMakeMcAnses as $item) {
+	foreach ($item as $subItem) {
+		foreach ($subItem as $mcAns) {
+			echo CHtml::errorSummary($mcAns, '', '', array('class'=>'errorMsg'));
+		}
+	}
+}
+?>
+
+<?php $form=$this->beginWidget('CActiveForm', array(
+		'id'=>'form1',
+		'action'=>'sectionMCSave',
+		'enableAjaxValidation'=>false,
+	)); ?>
+
+<? echo CHtml::hiddenField('reqHdrId', $reqHdrId); ?>
+
+<? 
+$mcIdx = 0;
+$handMakeMcIdx = 0;
+$catIdx = 0;
+
+foreach ($cats as $cat) {?>
+<table width="100%" border="1" cellpadding="2" cellspacing="0">
+  <tr>
+    <td colspan="6" bgcolor="#000099" class="sectionheader">SECTION <?=$catIdx + 5 ?> - <?=CHtml::encode($cat->name) ?></td>
+  </tr>
+
+
+  <? foreach ($subcats[$cat->id] as $subcat) {
+  	if (isset($msAnses[$cat->id][$subcat->id])) {
+  		foreach ($msAnses[$cat->id][$subcat->id] as $mcAns) {
+  			$mc = $mcAns->mc_master;
+  ?>
+  <tr>
+    <td bgcolor="#CCCCCC">Chapter   章節  </td>
+    <td colspan="2" bgcolor="#CCCCCC">Requirements   <span title="点击可显示其他翻译">要求</span><br /></td>
+    <td bgcolor="#CCCCCC">Comply   符合  </td>
+    <td bgcolor="#CCCCCC">Photos   圖片  </td>
+    <td bgcolor="#CCCCCC">Factor Violation Status   <span title="点击可显示其他翻译">違反</span><span title="点击可显示其他翻译">狀況</span> </td>
+  </tr>
+  <tr>
+    <td rowspan="5"><?=CHtml::encode($subcat->name) ?></td>
+    <td colspan="2"><?=CHtml::encode($mc->question) ?></td>
+    <td rowspan="5"><? echo $form->dropDownList($mcAns, '['.$mcIdx.']is_comply', $yesNo); ?></td>
+    <td>filename<span title="点击可显示其他翻译"> 圖片</span><span title="点击可显示其他翻译">名</span>: <? echo $form->textField($mcAns, '['.$mcIdx.']photo'); ?></td>
+    <td><? echo $form->textField($mcAns, '['.$mcIdx.']violation_sts'); ?></td>
+  </tr>
+  <tr>
+    <td rowspan="2" bgcolor="#CCCCCC">Risk Level   風險級別  </td>
+    <td rowspan="2"><?=$mc->riskCode ?></td>
+    <td bgcolor="#CCCCCC">Corrective Action   糾正措施  </td>
+    <td bgcolor="#CCCCCC">Organization Representative   <span title="点击可显示其他翻译">組織</span><span title="点击可显示其他翻译">代表</span> </td>
+  </tr>
+  <tr>
+    <td rowspan="3"><? echo $form->textField($mcAns, '['.$mcIdx.']action'); ?></td>
+    <td><? echo $form->textField($mcAns, '['.$mcIdx.']org_represent'); ?></td>
+  </tr>
+  <tr>
+    <td rowspan="2" bgcolor="#CCCCCC">LAW   <span title="点击可显示其他翻译">法律</span><span title="点击可显示其他翻译">法規</span> </td>
+    <td rowspan="2"><?=CHtml::encode($mc->law) ?></td>
+    <td bgcolor="#CCCCCC">Completion Date   完成日期  </td>
+  </tr>
+  <tr>
+    <td>
+    	<? echo $form->textField($mcAns, '['.$mcIdx.']complete_date', array('readonly'=>'readonly')); ?>
+		<input type="button" class="calendar_button" id="completeDateBtn_<?=$mcIdx ?>" value=" " />
+    	<? echo $form->hiddenField($mcAns, '['.$mcIdx.']mc_master_id'); ?>
+    	<? echo $form->hiddenField($mcAns, '['.$mcIdx.']id'); ?>    </td>
+  </tr>
+  <? $mcIdx++; }} // End of MC?>
+  
+  <?
+  if (isset($handMakeMcAnses[$cat->id][$subcat->id])) { 
+  	foreach ($handMakeMcAnses[$cat->id][$subcat->id] as $mcAns) {
+  ?>
+  <tr>
+    <td bgcolor="#CCCCCC">Chapter 章節  </td>
+    <td colspan="2" bgcolor="#CCCCCC">Requirements 要求</td>
+    <td bgcolor="#CCCCCC">Comply 符合</td>
+    <td bgcolor="#CCCCCC">Photos 圖片</td>
+    <td bgcolor="#CCCCCC">Factor Violation Status <span title="点击可显示其他翻译">違反</span><span title="点击可显示其他翻译">狀況</span> </td>
+  </tr>
+  <tr>
+    <td rowspan="5"><?=CHtml::encode($subcat->name) ?></td>
+    <td colspan="2"><?=CHtml::encode($mcAns->question) ?></td>
+    <td rowspan="5"><? echo $form->dropDownList($mcAns, '['.$handMakeMcIdx.']is_comply', $yesNo); ?></td>
+    <td>filename <span title="点击可显示其他翻译">圖片</span><span title="点击可显示其他翻译">名</span>: <? echo $form->textField($mcAns, '['.$handMakeMcIdx.']photo'); ?></td>
+    <td><? echo $form->textField($mcAns, '['.$handMakeMcIdx.']violation_sts'); ?></td>
+  </tr>
+  <tr>
+    <td rowspan="2" bgcolor="#CCCCCC">Risk Level 風險級別</td>
+    <td rowspan="2"><?=$mcAns->riskCode ?></td>
+    <td bgcolor="#CCCCCC">Corrective Action 糾正措施  </td>
+    <td bgcolor="#CCCCCC">Organization Representative <span title="点击可显示其他翻译">組織</span><span title="点击可显示其他翻译">代表</span></td>
+  </tr>
+  <tr>
+    <td rowspan="3"><? echo $form->textField($mcAns, '['.$handMakeMcIdx.']action'); ?></td>
+    <td><? echo $form->textField($mcAns, '['.$handMakeMcIdx.']org_represent'); ?></td>
+  </tr>
+  <tr>
+    <td rowspan="2" bgcolor="#CCCCCC">LAW    <span title="点击可显示其他翻译">法律</span><span title="点击可显示其他翻译">法規</span></td>
+    <td rowspan="2"><?=CHtml::encode($mcAns->law) ?></td>
+    <td bgcolor="#CCCCCC">Completion Date 完成日期  </td>
+  </tr>
+  <tr>
+    <td>
+    	<? echo $form->textField($mcAns, '['.$handMakeMcIdx.']complete_date', array('readonly'=>'readonly')); ?>
+		<input type="button" class="calendar_button" id="completeDateBtn_hm_<?=$handMakeMcIdx ?>" value=" " />
+    	<? echo $form->hiddenField($mcAns, '['.$handMakeMcIdx.']hand_make_tmpl_id'); ?>
+    	<? echo $form->hiddenField($mcAns, '['.$handMakeMcIdx.']id'); ?>    </td>
+  </tr>
+  <? $handMakeMcIdx++; } } // End of Hand Make MC?>
+  
+  <? } // End of subcat ?>
+</table>
+<br><br>
+<?
+	$catIdx++; 
+} // End of cat ?>
+
+
+<? if ($model->sts != RequestHeader::STS_COMPLETE) {?>
+<input type="button" value="Save" onclick="goClick()"/>
+<? }?>
+
+<? $this->endWidget(); ?>
+
+<script type="text/javascript">
+
+$(function() {
+	$('select[name$="[is_comply]"]').change(function() {
+		if ($(this).val() == 'Y') {
+			// Clear photo
+			var photoElem = $(this).parent().next().children(':first-child');
+			photoElem.val('');
+		}
+	});
+
+	// Calendar (Complete Date)
+	<? for ($i = 0; $i < $mcIdx; $i++) {?>
+		Calendar.setup({
+		    inputField : "RequestMcAns_<?=$i ?>_complete_date",
+		    trigger    : "completeDateBtn_<?=$i ?>",
+		    onSelect   : function() { this.hide() }
+		});
+	<? } ?>
+
+	<? for ($i = 0; $i < $handMakeMcIdx; $i++) {?>
+		Calendar.setup({
+		    inputField : "RequestMcHandMakeForm_<?=$i ?>_complete_date",
+		    trigger    : "completeDateBtn_hm_<?=$i ?>",
+		    onSelect   : function() { this.hide() }
+		});
+	<? } ?>
+
+});
+
+function goClick() {
+	var isPhotoValid = true;
+	$('select[name$="[is_comply]"]').each(function (key, value) {
+		var photoElem = $(this).parent().next().children(':first-child');
+		if ($(this).val() == 'N') {
+			if (photoElem.val() == '') {
+				photoElem.addClass('error');
+				isPhotoValid = false;
+			}
+			else {
+				photoElem.removeClass('error');
+			}
+		} 
+		else {
+			photoElem.removeClass('error');
+		}
+	});
+
+	if (!isPhotoValid) {
+		alert('The filename of photo should be filled in if the requirement is not complied');
+	}
+	else {
+		document.forms[0].submit();
+	}
+}
+</script>

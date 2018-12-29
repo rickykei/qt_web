@@ -1,0 +1,78 @@
+<? $risks = RequestHeader::getRiskDropDown(); ?>
+
+<link type="text/css" rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jscal2.css" />
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jscal2.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/lang/en.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/search.js"></script>
+
+<div id="content">
+
+	<div id="leftcol"><? echo CHtml::image(Yii::app()->baseUrl.'/images/report_logo.png'); ?></div>
+
+	<div id="rightcol">
+		<ul>
+			<li class="row" style="height: 200px">
+				<? echo CHtml::image(Yii::app()->baseUrl.'/images/supplier_search.png', 'report', array('class'=>rowpic)); ?>
+				<?php $form=$this->beginWidget('CActiveForm', array(
+					'id'=>'checklist_search',
+					'action'=>'report',
+					'method'=>'get',
+					'enableAjaxValidation'=>false,
+				)); ?>
+					<label>Req Report CD</label><? echo $form->textField($model,'report_cd'); ?><br/>
+					<label>Supplier Area</label><? echo $form->textField($model,'supp_area'); ?><br/>
+					<label>Supplier Code</label><? echo $form->textField($model,'supp_cd'); ?><br/>
+					<label>Supplier Name</label><? echo $form->textField($model,'supp_name'); ?><br/>
+					<label>Supplier Industry</label><? echo $form->textField($model,'supp_industry');?><br/>
+					<label>Risk Level</label><? echo $form->dropDownList($model, 'risk_lvl', $risks);?><br/> 
+					<label>Audit Date</label><? echo $form->textField($model,'audit_start_date'); ?><input type="button" class="calendar_button" id="startDate" value=" " 
+					/>to<? echo $form->textField($model,'audit_end_date'); ?><input type="button" class="calendar_button" id="endDate" value=" " /><br />
+					<label>&nbsp;</label>
+					<input class="searchBtn" type="submit" value="" />
+			<? $this->endWidget(); ?>
+
+			</li>
+		</ul>
+		<div class="clear"></div>
+		
+		<div class="remarks">*The PDF can be generated only when the status is VERIFY.</div>
+
+		<div id="pagingDiv">
+			<? include('reportPaging.php');?>
+		</div>
+		
+		<?php $form=$this->beginWidget('CActiveForm', array(
+			'id'=>'criteriaForm',
+			'action'=>NULL
+			)); ?>
+				<? echo $form->hiddenField($model,'itemCount'); ?><br>
+				<? echo $form->hiddenField($model,'report_cd'); ?><br>
+				<? echo $form->hiddenField($model,'supp_area'); ?><br>
+				<? echo $form->hiddenField($model,'supp_cd'); ?><br>
+				<? echo $form->hiddenField($model,'supp_name'); ?><br>
+				<? echo $form->hiddenField($model,'supp_industry'); ?><br>
+				<? echo $form->hiddenField($model,'audit_start_date'); ?><br>
+				<? echo $form->hiddenField($model,'audit_end_date'); ?><br>
+		<? $this->endWidget(); ?>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(function() {
+	Calendar.setup({
+	    inputField : "ReportSearchForm_audit_start_date",
+	    trigger    : "startDate",
+	    onSelect   : function() { this.hide() }
+	});
+
+	Calendar.setup({
+	    inputField : "ReportSearchForm_audit_end_date",
+	    trigger    : "endDate",
+	    onSelect   : function() { this.hide() }
+	});
+});
+
+function openWin(id) {
+	window.open('genPDF?id='+id,'mywin', 'width=800,height=600');
+}
+</script>

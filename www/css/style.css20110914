@@ -1,0 +1,450 @@
+* {
+	padding:0px;
+	margin:0px;
+	text-align:left;
+}
+
+input, select {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	
+}
+.button{
+	text-align:center;
+}
+#footer {
+	width:1280px;
+	margin:0px auto;
+	margin:40px 0px 0px;
+}
+.right {
+	float:right !important;
+}
+.left {
+	float:left !important;
+}
+.copyrights p{
+	margin:10px 10px 0px 10px;
+}
+.copyrights p a{
+	color:#898787;
+}
+.copyrights p a:hover{
+	text-decoration:underline;
+}
+.copyrights {
+	width:1280px;
+	height:40px;
+	border-top:#343434 solid 1px;
+}
+body {
+	background-color:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:#666666;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	 text-align:center;
+}
+a {
+	text-decoration:none;
+	outline:none;
+	color:#666666;
+}
+a img {
+	border:none;
+}
+.clear {
+	clear:both;
+}
+.bold {
+	font-weight:bold;
+}
+.colr {
+	color:#333333 !important;
+}
+.black {
+	color:#000;
+}
+
+.logo {
+	float:left;
+	padding-top:24px;
+	padding-left:24px;
+}
+
+#header {
+	color:#FFF;
+	 
+	position:relative;
+}
+
+#container {
+	margin-top:10px;
+	background-color:#FFF;
+	margin:0px auto;
+	width:1280px;
+	position:relative;
+	height:auto !important;
+	height:350px;
+}
+ 
+
+// menu bar
+#navigation {
+	float:left;
+ }
+
+#leftsidebar{
+	float:left;
+	 
+}
+#rightsidebar{
+	float:right;
+	 
+}
+#actionsidebar{
+	float:left;
+}
+
+#menu ul {
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#DDD;
+	float:left;
+	list-style:none;
+	height: 30px;
+	//margin: auto;
+	width: 1280px;
+	text-align:center;
+}
+
+#menu li{
+	float:left;
+	padding:0px 10px;
+	background-repeat:no-repeat;
+	background-position:right;
+	color:#ffffff;
+	margin-left:10px;
+}
+
+#menu ul li a{
+	color:#ffffff;
+}
+
+#menu ul li a:hover{
+	 
+	color:#666;
+	 
+}
+#menu ul li{
+	//padding-right:0px;
+	background-image:none;
+	padding-top:5px;
+}
+
+
+#rightsidebar ul {
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#FFF;
+	float:left;
+	list-style:none;
+	height: 20px;
+	margin: auto;
+	width: auto;
+}
+
+#rightsidebar li{
+	float:right;
+	padding:0px 10px;
+	background-repeat:no-repeat;
+	background-position:right;
+	color:#777;
+	margin-left:10px;
+	font-size:12px;
+}
+
+#rightsidebar ul li a{
+
+	color:#ffffff;
+}
+
+#rightsidebar ul li a:hover{
+	 
+	color:#fff;
+	 
+}
+#rightsidebar ul li{
+	//padding-right:0px;
+	background-image:none;
+}
+
+#leftsidebar ul {
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#FFF;
+	float:left;
+	list-style:none;
+	height: 20px;
+	margin: 5px;
+	width: auto;
+	padding-left: 63px
+}
+
+#leftsidebar li{
+	float:left;
+	padding:0px 10px;
+	background-repeat:no-repeat;
+	background-position:left;
+	
+	margin-left:10px;
+}
+
+#leftsidebar ul li a{
+	font-size:12px;
+	color:#888;
+}
+
+#leftsidebar ul li a:hover{
+	 
+	color:#187CD9;
+	 
+}
+#leftsidebar ul li{
+	//padding-right:0px;
+	background-image:none;
+}
+
+
+
+#actionsidebar ul {
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#FFF;
+	float:left;
+	list-style:none;
+	height: 20px;
+	margin: 5px;
+	width: auto;
+	padding-left: 120px
+}
+
+#actionsidebar li{
+	float:left;
+	padding:0px 10px;
+	background-repeat:no-repeat;
+	background-position:left;
+	font-size:13px;
+	margin-left:10px;
+}
+
+#actionsidebar ul li a{
+	font-size:12px;
+	color:#666666;
+}
+
+#actionsidebar ul li a:hover{
+	 
+	color:#555;
+	font-size:14px;
+	 
+}
+#actionsidebar ul li{
+	//padding-right:0px;
+	background-image:none;
+}
+// menu bar
+
+
+// content
+#content{
+	height: 500px;
+}
+
+
+#leftcol{
+	width:AUTO;
+	float:left;
+	margin-left:100px;
+	margin-top: 30px;
+	margin-right:auto;
+}
+ 
+#rightcol{
+	width: 75%;
+	float:right;
+	margin:0px 10px 0px 10px;
+}
+
+#rightcol  ul{
+	list-style:none;
+	margin: 0;
+	padding: 0;
+
+}
+#rightcol  ul li {
+	margin:0px 0px 10px 0px;
+	padding:10px 10px 30px 20px;
+	background-color:#E5E5E5;
+	height:110px;
+}
+#rightcol  ul li .row{
+	background-color:#BBB;
+}
+
+#rightcol ul li .rowpic{
+	float:left;
+ //	width:150px;
+	padding: 30px 20px 0px 40px;
+//	width:10%;
+}
+
+#rightcol ul li .rowtext{
+	padding: 20px 20px  0px 0px;
+	float:right;
+	width:80%;
+	font-size:12px;
+}
+	 
+#rightcol ul li  form{
+	padding:20px 0px 0px 0px;
+	float:right;
+	width:80%;
+	font-size:12px
+	 }
+//content
+
+.button {
+	background-color: #bbb;
+	color: #bbb;
+}
+
+
+//table
+
+#checklist_table {
+	margin:0px 10px 10px 0px;
+}
+
+#checklist_table  tr th{
+	text-align:left;
+	font-size:12px;
+	color: #444;
+	background-color:#BBB;
+	padding:0px 5px 0px 5px;
+}
+#checklist_table  tr td{
+	text-align:left;
+	font-size:12px;
+	color: #777;
+
+}
+
+#checklist_create label{
+	margin: 0px 0px 0px 10px;
+}
+
+#checklist_search label{
+	font-size:11px;
+	margin: 3px 0px 0px 0px;
+ 	width: 150px;
+	float: left;
+	text-align: right;
+	margin-right: 20px;
+	display: block;
+}
+
+#checklist_search #createchecklistbtn{
+	 
+}
+
+#checklist_detail_table tr td{
+	margin: 2px 0px 2px;
+}
+
+.checklist_detail_table_cat  {
+	color : #FFF;
+	background: #DDD;
+	height: 28px;
+	width: 100%;
+	margin: 0px 0px 0px 10px;
+	padding: 3px 0px 3px 10px;
+}
+ .checklist_detail_table_subcat  td{
+	background: #EEE;
+	height: 28px;
+	width: 100%;
+	margin: 0px 0px 0px 10px;
+	padding: 3px 0px 3px 10px;
+}
+ #checklist_detail_table_header th{
+	color: #000;
+	text-align:left;
+	font-size: 12px;
+ 	background: #aaa;
+	width: ;
+	height: 25px;
+	padding: 0px 20px 0px 10px;
+	margin: 0px 20px 0px 10px;
+ }
+ 
+  #checklist_detail_table_header td{
+	font-size: 12px;
+	background: #DDD;
+	color:#444;
+	width: ;
+	height: 30px;
+	padding: 0px 20px 0px 10px;
+	margin: 0px 20px 0px 10px;
+}
+#checklist_detail_table td{
+	height: 25px;
+}
+
+#checklist_detail_table_header .checklist_detail_table_content2 td {
+		background: #eee;
+		height: 30px;
+}
+
+
+#checklist_detail_tailor_make_table ,#checklist_detail_table{
+	width: 100%;
+}
+
+
+#checklist_detail_tailor_make_table .checklist_detail_tailor_make_table_title{
+	color : #333;
+	background: #EEE;
+	height: 25px;
+	 
+	margin: 0px 0px 0px 10px;
+	padding: 0px 0px 0px 10px;
+}
+
+#checklist_detail_tailor_make_table th{
+	color: #000;
+	text-align:left;
+ 	background: #aaa;
+ 	font-size:12px;
+	color : #333;
+	width: ;
+	height: 25px;
+	padding: 0px 20px 0px 10px;
+	margin: 0px 20px 0px 10px;
+}
+#checklist_detail_tailor_make_table td{
+background: #DDD;
+
+	width: ;
+	height: 25px;
+	padding: 0px 20px 0px 10px;
+	margin: 0px 20px 0px 10px;
+}
+
+
+.checklist_table_header {
+	height:20px;
+}
+

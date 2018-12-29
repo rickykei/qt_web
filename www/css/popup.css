@@ -1,0 +1,74 @@
+* {
+	padding:0px;
+	margin:0px;
+}
+
+input ,label, text{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	 
+}
+
+
+
+body {
+	background-color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:#000;
+}
+a {
+	text-decoration:none;
+	outline:none;
+	color:#666666;
+}
+a img {
+	border:none;
+}
+.clear {
+	clear:both;
+}
+
+#thickbox_header {
+	background-color:#eee;
+	padding:10px 10px 10px 10px;
+	margin:10px 10px 10px 10px;
+
+}
+
+#thickbox_form {
+    padding:10px 0px 10px 30px;
+	margin:10px 0px 10px 30px;
+}
+
+#thickbox_form text{
+	font-size:13px;
+	margin: 0px 0px 10px 10px;
+ 	 padding:0px 0px 0px 10px;
+	 text-align: left;
+	margin-right: 20px;
+	
+}
+br{
+	padding:10px 10px 10px 10px;
+	margin:10px 10px 10px 10px;
+}
+#thickbox_form label{
+	font-size:12px;
+	margin: 0px 0px 0px -10px;
+ 	width: 150px;
+	float: left;
+	text-align: right;
+	margin-right: 10px;
+	display: block
+	 
+}
+
+#buttondiv{
+	padding:0px 10px 0px 10px;
+	margin-left: auto;
+	margin-right: auto;
+	
+ 	position:relative;
+}
+//thickbox

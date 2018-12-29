@@ -1,0 +1,15 @@
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+-->
+</style>
+<div align="center" class="style1">Login Successfully!
+  <br>
+  <input name="button" type="button" id="close" onclick="self.parent.location.reload()" value="Close" />
+  <script type="text/javascript">
+document.all.close.focus();
+  </script>
+</div>

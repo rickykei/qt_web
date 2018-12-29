@@ -1,0 +1,150 @@
+.righttop {
+float: right;
+padding: 0px 10px;
+background-repeat: no-repeat;
+background-position: right;
+color: #187CD9;
+margin-left: 10px;
+font-size: 12px;
+}
+
+.infoMsg, .successMsg, .errorMsg, .warningMsg {
+border: 1px solid;
+margin: 10px 10px;
+padding:15px 10px 15px 50px;
+background-repeat: no-repeat;
+background-position: 10px center;
+}
+
+.infoMsg {
+color: #00529B;
+background-color: #BDE5F8;
+background-image: url('info.png');
+}
+
+.successMsg {
+color: #4F8A10;
+background-color: #DFF2BF;
+background-image:url('success.png');
+}
+
+.warningMsg {
+color: #9F6000;
+background-color: #FEEFB3;
+background-image: url('warning.png');
+}
+
+.errorMsg {
+color: #D8000C;
+background-color: #FFBABA;
+background-image: url('error.png');
+}
+
+.errorMsg ul li {
+	list-style-type: none;
+}
+
+#rightcol .errorMsg ul li {
+	margin: 10px 10px;
+	padding:15px 10px 15px 50px;
+	background-color:#FFBABA;
+	height:auto;
+}
+
+.errorMessage {
+	color: #D8000C;
+	font-size: 0.9em;
+}
+
+input.error, select.error {
+	background: #FEE;
+	border-color: #C00;
+}
+
+.input_form div {
+	display: inline 
+}
+
+.calendar_button {
+	border: none;
+	background: url(calendar.gif) no-repeat center top;
+	cursor:pointer;
+	width:20px;
+}
+
+.grid_200 {
+	display:inline;
+	width: 200px;
+	float: left;
+	position: relative;
+}
+
+#thickbox_form label.left {
+	text-align: left;
+	margin: 0px 0px 0px 10px;
+}
+
+.remarks {
+	color: #8470FF;
+	font-size: 70%;
+	bottom: 50px;
+	position: absolute;
+}
+
+.searchBtn {
+	background: url(searchButton.png) no-repeat;
+	border: none;
+	cursor:pointer;
+	width: 42px;
+    height: 42px;
+	margin-left: 500px;
+	margin-right: 0px;
+	
+}
+
+.createBtn {
+	background: url(sendLogo.png) no-repeat;
+	border: none;
+	cursor:pointer;
+	margin-left: 668px;
+	width: 43px;
+    height: 43px;
+}
+
+/* Paging */
+.pagebarUTH { font-size: 0.6em;font-family:verdana; padding: 0.2em 0.5em; margin-right: 0.1em; border: 1px solid #FFF; background: #FFF; text-decoration: none; text-align: center; height: 20px;}
+.pagebarUTH a, .pageList .this-page {color: #BBB; text-decoration: underline;border: 1px solid #D8D8D8; text-decoration: none; padding: 0.2em 0.5em; }
+.pagebarUTH a:hover {border: 1px solid #BBB;} 
+.pagebarUTH .break { padding: 2px 6px; border: none; background: #FFF; text-decoration: none; }
+.pagebarUTH .this-page { border: 1px solid #BBB; padding: 0.2em 0.5em; font-weight: bold; background: #BBB; color: #FFF; }
+.pagebarUTH a:active{color: #BBB; text-decoration: underline;}
+
+
+#thickbox_header {
+font-family:verdana;
+font-size:22px;
+background-color:#DDD;
+}
+
+.required{
+font-family:verdana;
+font-size:16px;
+}
+#thickbox_form {
+ width:480px;
+ position:absolute;
+}
+
+#thickbox_form #left_row{
+width:80px;
+ float:left;
+}
+
+#thickbox_form #right_row{
+width:400px;
+
+float:left;
+}
+.row{
+height:30px;
+}

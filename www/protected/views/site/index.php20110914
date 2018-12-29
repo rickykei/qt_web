@@ -1,0 +1,78 @@
+<link rel="stylesheet" type="text/css" href="css/sliding_nav.css" />
+ <script type="text/javascript" src="js/scripts.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/> 
+	<script src="js/jquery-1.6.2.min.js"></script> 
+	<script src="development-bundle/ui/jquery.ui.core.js"></script> 
+	<script src="development-bundle/ui/jquery.ui.widget.js"></script> 
+	<script src="development-bundle/ui/jquery.ui.tabs.js"></script>	
+<div id="header"><div class="wrap">
+            <div id="slide-holder">
+            <div id="slide-runner">
+                <a href=""><img id="slide-img-1" src="images/environmental_banner.jpg" class="slide" alt="" /></a>
+                <a href=""><img id="slide-img-2" src="images/gmp_banner.jpg" class="slide" alt="" /></a>
+                <a href=""><img id="slide-img-3" src="images/quality_banner.jpg" class="slide" alt="" /></a>
+                <a href=""><img id="slide-img-4" src="images/safety_banner.jpg" class="slide" alt="" /></a>
+                <a href=""><img id="slide-img-5" src="images/security_banner.jpg" class="slide" alt="" /></a> 
+				<a href=""><img id="slide-img-6" src="images/social_accoutnbaility_banner.jpg" class="slide" alt="" /></a> 
+                <div id="slide-controls">
+                 <!--<p id="slide-client" class="text"><strong>post: </strong><span></span></p>
+                 <p id="slide-desc" class="text"></p>-->
+                 <p id="slide-nav"></p>
+                </div>
+            </div>
+                
+                <!--content featured gallery here -->
+               </div>
+               <script type="text/javascript">
+                if(!window.slider) var slider={};slider.data=[{"id":"slide-img-1","client":"","desc":""},{"id":"slide-img-2","client":"","desc":""},{"id":"slide-img-3","client":"nature beauty","desc":"add your description here"},{"id":"slide-img-4","client":"nature beauty","desc":"add your description here"},{"id":"slide-img-5","client":"nature beauty","desc":"add your description here"},{"id":"slide-img-6","client":"nature beauty","desc":"add your description here"}];
+               </script>
+              </div>
+</div><!--/header-->	
+<script>
+	$(function() {
+		$( "#tabs" ).tabs();
+	});
+	
+	
+	
+</script>
+<br/>
+<div id="index">
+		<div id="tabs">
+			<ul>
+			<li><a href="/benefits.html">Benefits</a></li> 
+			<li><a href="/howitworks.html">How it works</a></li> 
+			<li><a href="/partners.html">Partners</a></li> 
+			<li><a href="/whycomplianceaudit.html">Why compliance audit?</a></li> 
+			<li><a href="/quality.html">Quality</a></li> 
+			<li><a href="/environmental.html">Environmental</a></li> 
+			<li><a href="/socialaccountability.html">Social Accountability</a></li> 
+			<li><a href="/gmp.html">GMP</a></li> 
+			<li><a href="/occupationalhealthsafety.html">Occupational Health &amp; Safety</a></li> 
+			<li><a href="/transportprotectionsecurity.html">Transport Protection Security</a></li> 
+			</ul>
+			
+		</div>
+		
+	<div id="right">	
+		<div id="overview">
+		Overview
+		<ul>
+		<li><a href="#ui-tabs-1">Benefits</a></li>
+		<li>How it works</li>
+		<li>Partners</li>
+		<li>Why compliance audit?</li>
+		</ul>
+
+		Sustainability Management
+		<ul>
+		<li>Quality</li>
+		<li>Environmental</li>
+		<li>Social Accountability</li>
+		<li>GMP (Good Manufacturing Practice)</li>
+		<li>Occupational Health &amp; Safety</li>
+		<li>Transport Protection Security</li>
+		</ul>
+		</div>
+	</div>
+</div><!-- End demo -->

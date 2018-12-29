@@ -1,0 +1,292 @@
+#rightsidebar ul {
+	background-color:#FFF;
+	float:right;
+	list-style:none;
+	height: 20px;
+	width: auto;
+}
+
+#rightsidebar li{
+	float:right;
+	padding:0px 0px 0px 0px;
+	background-repeat:no-repeat;
+	background-position:right;
+	color:#000000;
+	margin-left:10px;
+	margin-right:0px;
+	font-size:12px;
+}
+
+#rightsidebar ul li a{
+
+	color:#ffffff;
+}
+
+#rightsidebar ul li a:hover{
+	 
+	color:#fff;
+	 
+}
+#rightsidebar ul li{
+	//padding-right:0px;
+	background-image:none;
+}
+
+#leftsidebar ul {
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#FFF;
+	float:left;
+	list-style:none;
+	height: 20px;
+	margin: auto;
+	width: auto;
+	padding-left: 3px
+}
+
+#leftsidebar li{
+	float:left;
+	padding:0px 10px;
+	background-repeat:no-repeat;
+	background-position:left;
+	
+	margin-left:10px;
+}
+
+#leftsidebar ul li a{
+	font-size:12px;
+	color:#880088;
+}
+
+#leftsidebar ul li a:hover{
+	 
+	color:#000;
+	 
+}
+#leftsidebar ul li{
+	//padding-right:0px;
+	background-image:none;
+}
+
+
+#actionsidebar ul {
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#FFF;
+	float:left;
+	list-style:none;
+	height: 20px;
+	margin: auto;
+	width: auto;
+	padding-left: 80px
+}
+
+#actionsidebar li{
+	float:left;
+	padding:0px 10px;
+	background-repeat:no-repeat;
+	background-position:left;
+	font-size:13px;
+	margin-left:10px;
+}
+
+#actionsidebar ul li a{
+	font-size:12px;
+	color:#880088;
+}
+
+#actionsidebar ul li a:hover{
+	 
+	color:#000;
+	 
+}
+#actionsidebar ul li{
+	//padding-right:0px;
+	background-image:none;
+}
+// menu bar
+
+
+
+// content
+#content{
+	height: 500px;
+}
+
+
+#leftcol{
+	width: 5%;
+	float:left;
+	margin:10px 10px 10px 30px;
+}
+ 
+#rightcol{
+	width: 75%;
+	float:right;
+	margin:0px 10px 0px 10px;
+}
+
+#rightcol  ul{
+	list-style:none;
+	margin: 0;
+	padding: 0;
+
+}
+#rightcol  ul li {
+	margin:0px 0px 10px 0px;
+	padding:10px 10px 30px 20px;
+	background-color:#BBB;
+	height:100px;
+}
+#rightcol  ul li .row{
+	background-color:#BBB;
+}
+
+#rightcol ul li .rowpic{
+	float:left;
+ 	width:150px;
+	padding: 20px 10px 0px 20px;
+	width:10%;
+	vertical-align: middle;
+}
+
+#rightcol ul li .rowtext{
+	vertical-align: middle;
+	padding: 10px 20px 0px 30px;
+	width:150px;
+	float:left;
+	width:80%;
+	
+}
+	 
+#rightcol ul li  form{
+	padding:0px 0px 0px 0px;
+	float:right;
+	width:80%;
+	 }
+//content
+
+
+
+//table
+
+#requestlist_table {
+	margin:0px 10px 10px 0px;
+}
+
+#requestlist_table  tr th{
+	text-align:left;
+	font-size:13px;
+	color: #FFF;
+	background-color:#BBB;
+	padding:0px 5px 0px 5px;
+}
+#requestlist_table  tr td{
+	text-align:left;
+	font-size:13px;
+	color: #000;
+
+}
+
+#requestlist label{
+	margin: 0px 0px 0px 10px;
+}
+
+#requestlist label{
+	font-size:13px;
+	margin: 0px 0px 0px 0px;
+ 	width: 150px;
+	float: left;
+	text-align: right;
+	margin-right: 20px;
+	display: block
+}
+
+#requestlist_search #requestlistbtn{
+	 
+}
+
+#requestlist_detail_table tr td{
+	margin: 2px 0px 2px;
+}
+
+.requestlist_detail_table_cat  {
+	color : #FFF;
+	background: #005;
+	width: 100%;
+	margin: 0px 0px 0px 10px;
+	padding: 3px 0px 3px 10px;
+}
+ .requestlist_detail_table_subcat  td{
+	background: #CCC;
+	height: 25px;
+	width: 100%;
+	margin: 0px 0px 0px 10px;
+	padding: 3px 0px 3px 10px;
+}
+ #requestlist_detail_table_header th{
+	color: #000;
+	text-align:left;
+ 	background: #aaa;
+ 	border-width:1px;
+	border-style:solid;
+	width: ;
+	height: 25px;
+	padding: 0px 20px 0px 10px;
+	margin: 0px 20px 0px 10px;
+ }
+ 
+  #requestlist_detail_table_header td{
+	font-size: 14px;
+	background: #DDD;
+	border-width:1px;
+	border-style:solid;
+	width: ;
+	height: 25px;
+	padding: 0px 20px 0px 10px;
+	margin: 0px 20px 0px 10px;
+}
+#requestlist_detail_table td{
+	height: 20px;
+}
+
+#requestlist_detail_table_header .checklist_detail_table_content2 td {
+		background: #eee;
+}
+
+
+#requestlist_detail_tailor_make_table ,#checklist_detail_table{
+	width: 100%;
+}
+
+
+#requestlist_detail_tailor_make_table .checklist_detail_tailor_make_table_title{
+	color : #FFF;
+	background: #005;
+	height: 25px;
+	 margin: 0px 0px 0px 10px;
+	padding: 0px 0px 0px 10px;
+}
+
+#requestlist_detail_tailor_make_table th{
+	color: #000;
+	text-align:left;
+ 	background: #aaa;
+ 	border-width:1px;
+	border-style:solid;
+	width: ;
+	height: 25px;
+	padding: 0px 20px 0px 10px;
+	margin: 0px 20px 0px 10px;
+}
+#requestlist_detail_tailor_make_table td{
+background: #DDD;
+	border-width:1px;
+	border-style:solid;
+	width: ;
+	height: 25px;
+	padding: 0px 20px 0px 10px;
+	margin: 0px 20px 0px 10px;
+}
+
+//table
